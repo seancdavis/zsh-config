@@ -5,7 +5,7 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="robbyrussell"
+# ZSH_THEME="alanpeabody"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -45,7 +45,10 @@ plugins=(git rails ruby)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=$PATH:/Users/scdavis/.rvm/gems/ruby-1.9.3-p448/bin:/Users/scdavis/.rvm/gems/ruby-1.9.3-p448@global/bin:/Users/scdavis/.rvm/rubies/ruby-1.9.3-p448/bin:/Users/scdavis/.rvm/bin:./vendor/ruby/bin:/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:/usr/local/share/python:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/Users/scdavis/.bin
+export PATH=$HOME/.rbenv/bin:/usr/local/bin:/Users/sdavis/.bin:$PATH
+
+# load rbenv automatically
+eval "$(rbenv init -)"
 
 # PROMPT
 #######################################################
@@ -99,7 +102,7 @@ function battery_charge() {
 }
 
 PROMPT='
-$fg[cyan]%n $fg[white]on $fg[blue]%m $fg[yellow]$(get_pwd) $(git_prompt_info)$(put_spacing)$(battery_charge)
+$fg[cyan]%n $fg[white]on $fg[magenta]%m $fg[yellow]$(get_pwd) $(git_prompt_info)$(put_spacing)$(battery_charge)
 $reset_color> '
 
 # ALIASES
@@ -153,3 +156,5 @@ alias gash="git stash"
 
 alias shlvl="echo $SHLVL"
 alias flush_dns="sudo killall -HUP mDNSResponder"
+
+alias be="bundle exec"
