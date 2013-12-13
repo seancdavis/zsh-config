@@ -151,6 +151,7 @@ alias gull='git pull'
 alias gullom='git pull origin master'
 alias gm="git merge"
 alias gash="git stash"
+alias gog="git log --pretty=format:\"%h - %an, %ar : %s\""
 
 alias shlvl="echo $SHLVL"
 alias flush_dns="sudo killall -HUP mDNSResponder"
