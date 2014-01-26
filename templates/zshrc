@@ -45,7 +45,7 @@ plugins=(git rails ruby)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=$HOME/.rbenv/bin:/usr/local/bin:/Users/sdavis/.bin:$PATH
+export PATH=$HOME/.rbenv/bin:/usr/local/bin:/Users/sdavis/.bin:$HOME/.bin:$PATH
 
 # load rbenv automatically
 eval "$(rbenv init -)"
